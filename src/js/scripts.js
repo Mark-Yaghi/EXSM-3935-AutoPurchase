@@ -347,7 +347,9 @@ async function main()
 
          let validYear = false;
          let modelYear = await input("\nPlease enter the year of your vehicle: ");
-             const dYear=new Date();                                     //create a date object
+             modelYear=modelYear.trim();
+         
+         const dYear=new Date();                                     //create a date object
              let dateYear=(dYear.getFullYear()+1);                       //get this year's 'year' number, and add one to it so that it'll always give us the current year +1; i.e., if this year is 2022, it'll return 2023
                    
              do
@@ -356,6 +358,7 @@ async function main()
                 {
                   output("Bad year entered;");  
                   modelYear= await input("Please enter a model year for your vehicle between 1900 and "+dateYear+" :");
+                  modelYear=modelYear.trim();
                 }
        
                 else
@@ -407,6 +410,7 @@ async function main()
 
 
             let dateInput = await input("Please enter a purchase date in the format YYYY-MM-DD: ");
+            dateInput=dateInput.trim();
             let verifyDate=false;
             
             do
@@ -416,6 +420,7 @@ async function main()
              {
 
                dateInput=await input("You entered a wrong date. Please enter a valid date in the format YYYY-MM-DD: ");
+               dateInput=dateInput.trim();
                verifyDate=false;
                
              }
