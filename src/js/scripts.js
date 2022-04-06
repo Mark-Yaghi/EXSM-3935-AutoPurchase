@@ -115,7 +115,7 @@ async function main()
                if (countL <= 20) 
                {
                    validLengthLName = true;
-                   o//utput("valid length boolean value: " + validLengthLName);
+                  
                }
 
                else if(countL=0)
@@ -166,10 +166,8 @@ async function main()
             }
 
          }while ((validCharLName == false) || (validLengthLName == false))
-
         
-         output("This is your name: "+firstName.toUpperCase()+" "+lastName.toUpperCase());
-
+        // output("This is your name: "+firstName.toUpperCase()+" "+lastName.toUpperCase());
 
 
           //<<<<<<<<<<<<<<<<<<<<<<<<<<<<-------------------------------THE CODE BELOW  IS FOR ADDRESS VERIFICATION AND VERIFIES THAT THE USER INPUTS AT LEAST 10 CHARACTERS-------------------->>>>>>>>>>>>>>
@@ -318,7 +316,7 @@ async function main()
            
         if(selectModel=="")  // check to see if the client entered anything 
         {
-            output("SelectModel on line 110 is empty: "+selectModel);
+            
      
            do        
            {
@@ -470,12 +468,7 @@ async function main()
               // output("Line 468 showing array contents: "+firstName+lastName+address+selectBrand+selectModel+modelYear+vin+dateInput );
             }
 
-          //  for(row of vehicleArray)
-           // {
-
-             //  output(row);    // display the array -- this is just a test line to ensure proper input.
-           // }
-          
+                   
             profileArray.push(vehicleArray);            //main array (Profile Array), and populate it with the contents of the vehicleArray.
 
       }      // <<<------------ this brace marks the end of the condition 1 'if'. 
