@@ -378,7 +378,7 @@ async function main()
                     while (validVin==false)         
                    {
                                                     
-                     vin= await input("Please enter a 17 character VIN for your vehicle consisting of ONLY letters and numbers, EXCEPT: NO i, I, o,O, or the number 0: ");
+                     vin= await input("Please enter a 17 character VIN for your vehicle consisting of ONLY letters and numbers, EXCEPT: NO i, I, o,O, q, Q: ");
                      vin=vin.trim();
                      
                       if(vin.length==17 && checkVin(vin)==true)  // check to see if the client entered the correct number of characters. If so, call the checkVin function.
@@ -401,7 +401,7 @@ async function main()
           
                    function checkVin(vin)
                    {
-                      return /^[A-HJ-Za-hj-z1-9]*$/.test(vin);   //check to make sure the user entered ONLY letters (upper and lower case) and numbers. No 0 (zero) i, I, o, O or other characters acceptable.
+                      return  /^[A-HJ-NPR-Za-hj-npr-z0-9]*$/.test(vin);   //check to make sure the user entered ONLY letters (upper and lower case) and numbers. No 0 (zero) i, I, o, O or other characters acceptable.
                    
                    }
            
