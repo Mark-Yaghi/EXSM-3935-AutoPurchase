@@ -92,7 +92,7 @@ async function main()
 
          output("\nManufacturer List:\n1. Audi\n2. BMW\n3. Chrysler\n4. Chevrolet  \n5. Cadillac \n6. Ford\n7. Mercedes \n8. Acura \n9. Hyundai\n10. VW \n11. GMC\n12. Buick\n13. Nissan\n14. Mazda\n15. Infiniti");
         
-         let brandNum = await input("Please select a manufacturer number: ");
+         let brandNum = await input("\nPlease select a manufacturer number: ");
          let selectBrand;
          let validMake=false;
        do
@@ -108,7 +108,7 @@ async function main()
             }
             else
             {                    
-                  switch (Number(brandNum)) 
+                 switch (Number(brandNum)) 
                   {
                      case 1:
                         selectBrand = "Audi";
@@ -176,10 +176,9 @@ async function main()
                         break; 
                   }
                   validMake=true;
-
             }  // end of if/else             
                            
-       } while (validMake==false || (length>=3))    //end of do
+       } while (validMake==false || (length>=3))    //end of do 
          
        output("Your manufacturer is " + selectBrand);           
        
@@ -201,7 +200,7 @@ async function main()
              if (selectModel=="")
              {     
               validModel=false;
-              output("You need to enter a model name for your vehicle:");     
+              output("You need to enter a model name for your vehicle: ");     
              }     
              else
              {            
@@ -376,13 +375,8 @@ async function main()
            {
               for (i=0; i < profileArray.length; i++)
                {
-                  let dataRow=profileArray[i];
-                
-                  for(let count=0; count < dataRow.length; count++)
-                  {
-                    // output("line 509: "+ dataRow[count]);
-
-                  }               
+                  let dataRow=profileArray[i];               
+                           
                   output("\nFirst Name: "+dataRow[0]+"\nLast Name: "+dataRow[1]+"\nAddress: "+dataRow[2]+"\nVehicle Make: "+ dataRow[3]+"\nVehicle Model : "+ dataRow[4]+"\nModel Year: "+dataRow[5]+"\nVIN: "+dataRow[6]+"\nPurchase Date: "+dataRow[7]);                                
                }
            }          
